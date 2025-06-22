@@ -1,19 +1,21 @@
 cmake_minimum_required(VERSION 3.14...3.22)
 
-project(UseCudaLibDocs)
+set (TEST_PROJECT "hello")
+set (TEST_PROJECT_SUFFIX "docs")
+project (${TEST_PROJECT}_${TEST_PROJECT_SUFFIX})
 
 # ---- Dependencies ----
 
 include(../cmake/CPM.cmake)
 
 CPMAddPackage("gh:mosra/m.css#a0d292ec311b97fefd21e93cdefb60f88d19ede6")
-CPMAddPackage(NAME UseCudaLib SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
+CPMAddPackage(NAME ${TEST_PROJECT} SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
 
 # ---- Doxygen variables ----
 
 # set Doxyfile variables
-set(DOXYGEN_PROJECT_NAME UseCudaLib)
-set(DOXYGEN_PROJECT_VERSION ${UseCudaLib_VERSION})
+set(DOXYGEN_PROJECT_NAME ${TEST_PROJECT})
+set(DOXYGEN_PROJECT_VERSION ${${TEST_PROJECT}_VERSION})
 set(DOXYGEN_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/..")
 set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/doxygen")
 
