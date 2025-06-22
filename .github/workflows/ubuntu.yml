@@ -27,14 +27,15 @@ jobs:
           path: "**/cpm_modules"
           key: ${{ github.workflow }}-cpm-modules-${{ hashFiles('**/CMakeLists.txt', '**/*.cmake') }}
 
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake g++ ninja-build
+            #- name:
+            #run: |
+            #sudo apt-get update && sudo apt-get install -y cmake g++ ninja-build
 
       - name: Configure
         run: |
           cmake -S test -B build/test \
-          -DENABLE_TEST_COVERAGE=1 \
-          -DTEST_INSTALLED_VERSION=1 \
+          -DENABLE_TEST_COVERAGE=ON \
+          -DTEST_INSTALLED_VERSION=OFF \
           -DCMAKE_BUILD_TYPE=Debug
 
       - name: build

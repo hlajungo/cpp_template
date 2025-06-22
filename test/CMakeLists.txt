@@ -81,7 +81,7 @@ install (TARGETS ${PROJECT_NAME}
 
 # ---- code coverage ----
 
-if (ENABLE_TEST_COVERAGE AND TEST_INSTALLED_VERSION)
+if (ENABLE_TEST_COVERAGE AND NOT TEST_INSTALLED_VERSION)
   # "-ftest-coverage" for .gcno，控制流程圖與語法分析
   # "-fprofile-arcs" for .gcda, 真正執行統計次數
   # "--coverage" == "-ftest-coverage" + "-fprofile-arcs"
