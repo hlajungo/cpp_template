@@ -19,6 +19,9 @@ include (../cmake/CPM.cmake)
 set (CMAKE_CXX_STANDARD 20)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
+set (CMAKE_EXPORT_COMPILE_COMMANDS ON) # outputting to the file
+                                       # "build/compile_commands.json"
+
 
 # ---- Package ----
 

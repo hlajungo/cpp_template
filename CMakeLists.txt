@@ -28,7 +28,7 @@ set (CMAKE_AUTORCC ON)
 set (CMAKE_CXX_STANDARD 20)
 set (CMAKE_CXX_STANDARD_REQUIRED ON) # forcing using CMAKE_CXX_STANDARD
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
-set (CMAKE_EXPORT_COMPILE_COMMANDS ON) # outputting the file
+set (CMAKE_EXPORT_COMPILE_COMMANDS ON) # outputting to the file
                                        # "build/compile_commands.json"
 
 # c++20 module:
