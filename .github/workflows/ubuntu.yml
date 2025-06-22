@@ -32,9 +32,7 @@ jobs:
 
       - name: Configure
         run: |
-          cmake -S test -B build/test
-
-        #cmake -Stest -Bbuild -DENABLE_TEST_COVERAGE=1 -DCMAKE_BUILD_TYPE=Debug
+          cmake -S test -B build/test -DENABLE_TEST_COVERAGE=1 -DCMAKE_BUILD_TYPE=Debug
 
       - name: build
         run: |
