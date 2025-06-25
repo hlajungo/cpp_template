@@ -35,7 +35,7 @@ if (TEST_INSTALLED_VERSION)
   find_package (${TEST_PROJECT} CONFIG REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/../install/project)
 else ()
   # 這會在當前文件插入 ../CMakeLists.txt，意味著加入 target ${TEST_PROJECT}
-  CPMAddPackage (NAME ${TEST_PROJECT} SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
+  CPMAddPackage (NAME ${TEST_PROJECT} SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../my_project)
 endif ()
 
 # ---- Create binary ----

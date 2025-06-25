@@ -1,4 +1,4 @@
-cmake -S . -B build/project
+cmake -S my_project -B build/project
 cmake --build build/project
 cmake --install build/project --prefix ./install/project
 

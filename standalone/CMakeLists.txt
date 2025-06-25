@@ -16,13 +16,14 @@ if (HELLO_INSTALLED_VERSION)
   # REQUIRED for jump error when not found
   # list(APPEND CMAKE_PREFIX_PATH "/PATH") for simple path
   find_package (
-    hello CONFIG REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/../install/project
+    #hello CONFIG REQUIRED PATHS ${CMAKE_CURRENT_SOURCE_DIR}/../install/project
+    hello CONFIG REQUIRED
   )
 else ()
   # "CPMAddPackage" for adding source code
   CPMAddPackage(
     NAME hello
-    SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..
+    SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/../my_project
   )
 endif ()
 

@@ -26,10 +26,12 @@ set (CMAKE_AUTORCC ON)
 # c++20: init
 
 set (CMAKE_CXX_STANDARD 20)
-set (CMAKE_CXX_STANDARD_REQUIRED ON) # forcing using CMAKE_CXX_STANDARD
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20")
-set (CMAKE_EXPORT_COMPILE_COMMANDS ON) # outputting to the file
-                                       # "build/compile_commands.json"
+set (CMAKE_CXX_STANDARD_REQUIRED ON) # forcing using CMAKE_CXX_STANDARD
+
+# outputting to the file "build/compile_commands.json"
+
+set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # c++20 module:
 
@@ -37,7 +39,7 @@ set (CMAKE_EXPORT_COMPILE_COMMANDS ON) # outputting to the file
 
 # cpm: init
 
-include (cmake/CPM.cmake)
+include (../cmake/CPM.cmake)
 cpmaddpackage ("gh:TheLartians/PackageProject.cmake@1.8.0")
 
 # ---- Compile: Global ----
@@ -72,7 +74,7 @@ file (
 
 #find_package (Qt6 REQUIRED COMPONENTS Core Widgets)
 
-# ---- Compile: target lib PROJECT_NAME
+# ---- Compile
 
 add_library (${PROJECT_NAME} ${sources})
 
