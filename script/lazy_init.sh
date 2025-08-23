@@ -1,27 +1,29 @@
 #!/bin/bash
 
-p_cmake ()
+# lazy project
+lpcmake ()
 {
   cmake -S my_project -B build/my_project
   cmake --build build/my_project
-  cmake --install build/my_project --prefix ./install/my_project
 }
 
-s_cmake ()
+# lazy standalone
+lscmake ()
 {
   cmake -S standalone/ -B build/standalone
   cmake --build build/standalone
-  cmake --install build/standalone/ --prefix ./install/standalone
+  ./build/standalone/project_standalone
 }
 
-t_cmake ()
+ltcmake ()
 {
   cmake -S test/ -B build/test
   cmake --build build/test
   ctest --test-dir ./build/test --output-on-failure
+  #./build/test/my_project_test
 }
 
-d_cmake ()
+ldcmake ()
 {
   cmake -S documentation/ -B build/documentation
   cmake --build build/documentation --target GenerateDocs
