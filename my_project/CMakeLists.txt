@@ -50,6 +50,7 @@ file (
   headers
   CONFIGURE_DEPENDS
   "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp"
 )
 
 # c++ sources: source/...
