@@ -71,7 +71,7 @@ file (
   "${CMAKE_CURRENT_SOURCE_DIR}/source/*.ixx"
 )
 
-# qt6: library
+# qt6: find library
 
 #find_package (Qt6 REQUIRED COMPONENTS Core Widgets)
 
